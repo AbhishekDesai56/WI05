@@ -102,7 +102,7 @@
                 passwordError.textContent = "";
                 return;
             }
-            let passwordRegex = RegExp('^[A-Za-z]{8,}$');
+            let passwordRegex = RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!?@])[a-zA-Z0-9!?@]{8,}$');
             if(passwordRegex.test(password.value))
                 passwordError.textContent = "";
             else passwordError.textContent = "Password is Incorrect";
