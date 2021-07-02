@@ -28,7 +28,7 @@
             <input type="url" name="url" id="url">
         </div>
         <div>
-            <label for="number">number input type: </label>
+            <label for="number">mobile number input type: </label>
             <input type="number" name="number" id="number">
         </div>
         <div>
@@ -88,12 +88,12 @@
                 mobileError.textContent = "";
                 return;
             }
-            let mobileRegex = RegExp('^\\d{2}\\s\\d{10}');
+            let mobileRegex = RegExp('^(91)\\s\\d{10}');
             if(mobileRegex.test(mobile.value))
                 mobileError.textContent = "";
             else mobileError.textContent = "Mobile No is Incorrect";
         });
-        
+
         const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
         output.textContent = salary.value;
